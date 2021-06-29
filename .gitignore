@@ -1,0 +1,6 @@
+/.idea/
+/cache-dl
+/cache-ccache
+/output-buildroot
+/output-iso
+/cfg/.config.old

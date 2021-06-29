@@ -1,0 +1,16 @@
+#!/bin/sh
+start() {
+  until findfs LABEL=RUNBOOTISO > /dev/null 2> /dev/null; do
+    sleep 1
+  done
+  mount $(findfs LABEL=RUNBOOTISO) /mnt
+  source /mnt/run.sh
+}
+
+case "$1" in
+    start)
+       start
+       ;;
+esac
+
+exit 0
